@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
 }
 
 html,
@@ -59,18 +60,110 @@ section.banner {
   max-height: 800px;
   background-size: contain;
   background-color: black;
-  height: calc(100vh - 115px);
+  height: calc(90vh - 115px);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-image: url("../img/bg.jpg");
 }
 
+section.banner .text-banner {
+  width: 100%;
+  max-width: 400px;
+  padding: 100px;
+}
+
+.text-banner .text-banner-single {
+  width: 400px;
+  height: 60px;
+  padding: 10px 30px;
+  color: white;
+  font-size: 23px;
+  text-align: start;
+  margin-bottom: 20px;
+  background-size: 100% 100%;
+  background-image: url("../img/box-text.png");
+}
+
+.text-banner-single:nth-of-type(2) {
+  left: -15px;
+  width: 320px;
+  position: relative;
+}
+
+.text-banner-single:nth-of-type(3) {
+  left: -30px;
+  width: 240px;
+  position: relative;
+}
+
+.text-banner-single:nth-of-type(4) {
+  left: -40px;
+  width: 400px;
+  color: black;
+  position: relative;
+  background-image: url("../img/box-white-text.png");
+}
+
 /** RESPONSIVO **/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   section.banner {
-    height: 85vw;
+    height: 50vw;
+  }
+
+  section.banner .text-banner {
+    top: -70px;
+    left: -40px;
+    position: relative;
+  }
+
+  .text-banner .text-banner-single {
+    width: 320px;
+  }
+
+  .text-banner-single:nth-of-type(2) {
+    width: 280px;
+  }
+
+  .text-banner-single:nth-of-type(3) {
+    width: 220px;
+  }
+
+  .text-banner-single:nth-of-type(4) {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav.desktop {
+    display: none;
+  }
+
+  section.banner {
+    height: 80vw;
     min-height: 0;
     max-height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 75px bottom;
+  }
+
+  .text-banner .text-banner-single {
+    width: 280px;
+    height: 50px;
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+
+  .text-banner-single:nth-of-type(2) {
+    width: 240px;
+  }
+
+  .text-banner-single:nth-of-type(3) {
+    width: 200px;
+  }
+
+  .text-banner-single:nth-of-type(4) {
+    width: 280px;
   }
 }
