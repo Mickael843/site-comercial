@@ -57,6 +57,7 @@ nav.mobile {
   height: 32px;
   float: right;
   display: none;
+  cursor: pointer;
   margin-top: 25px;
   background-size: 100% 100%;
   background-image: url("../img/icon_menu.png");
@@ -138,11 +139,12 @@ section.banner .text-banner {
 
 section.veiculos-destaque {
   padding: 25px 2%;
+  text-align: center;
 }
 
 section.veiculos-destaque .line-title {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1000px;
   position: relative;
   text-align: center;
 }
@@ -155,7 +157,7 @@ section.veiculos-destaque .ln1 {
   background-color: black;
 }
 
-section.veiculos-destaque h2 {
+section.veiculos-destaque .line-title h2 {
   padding: 0 20px;
   font-size: 24px;
   text-align: center;
@@ -163,6 +165,49 @@ section.veiculos-destaque h2 {
   display: inline-block;
   background-color: white;
   text-transform: uppercase;
+}
+
+.vitrine-destaque {
+  float: left;
+  width: calc(100% / 3);
+}
+
+.vitrine-destaque .container {
+  padding: 40px 0;
+  max-width: 1000px;
+}
+
+.vitrine-destaque .carro-img {
+  width: 100%;
+  padding-top: 100%;
+  border: 8px solid white;
+  background-size: 100% 100%;
+}
+
+.vitrine-destaque h2 {
+  color: black;
+  font-size: 20px;
+  padding-left: 8px;
+}
+
+.vitrine-destaque p {
+  font-size: 15px;
+  padding-top: 8px;
+  color: #353535;
+  padding-left: 8px;
+}
+
+.vitrine-destaque a {
+  width: 150px;
+  color: white;
+  display: block;
+  margin-top: 10px;
+  margin-left: 8px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 4px solid #b21e1e;
+  background-color: #eb2d2d;
 }
 
 /** RESPONSIVO **/
@@ -234,5 +279,35 @@ section.veiculos-destaque h2 {
 
   .text-banner-single:nth-of-type(4) {
     width: 280px;
+  }
+}
+
+@media screen and (min-height: 600px) and (max-height: 690px) {
+  section.banner {
+    height: 70vh;
+    max-height: 800px;
+  }
+
+  section.veiculos-destaque {
+    padding: 30px 2%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .vitrine-destaque {
+    width: 80%;
+    float: none;
+    margin-top: 20px;
+    display: inline-block;
+  }
+
+  .vitrine-destaque a {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .vitrine-destaque {
+    width: 100%;
   }
 }
