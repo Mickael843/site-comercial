@@ -25,6 +25,7 @@ body {
 header {
   height: 115px;
   padding: 20px 2% 35px 2%;
+  border-bottom: 3px solid #eb2d2d;
 }
 
 header .logo {
@@ -144,7 +145,7 @@ section.veiculos-destaque {
 
 .line-title {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1260px;
   position: relative;
   text-align: center;
 }
@@ -506,6 +507,14 @@ footer p {
 
   .w50 {
     width: 100%;
+  }
+
+  section.services .half-2 {
+    padding: 60px 40px;
+  }
+
+  .half-2 .depoimento-single p {
+    font-size: 15px;
   }
 }
 
